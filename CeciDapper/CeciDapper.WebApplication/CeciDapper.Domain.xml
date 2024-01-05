@@ -1,0 +1,1660 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CeciDapper.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:CeciDapper.Domain.DTO.Address.AddressAddDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the information for adding an address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressAddDTO.UserId">
+            <summary>
+            Gets or sets the user ID associated with the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressAddDTO.ZipCode">
+            <summary>
+            Gets or sets the zip code of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressAddDTO.Street">
+            <summary>
+            Gets or sets the street name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressAddDTO.District">
+            <summary>
+            Gets or sets the district name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressAddDTO.Locality">
+            <summary>
+            Gets or sets the locality (city or town) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressAddDTO.Number">
+            <summary>
+            Gets or sets the house or building number of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressAddDTO.Complement">
+            <summary>
+            Gets or sets additional information or complement for the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressAddDTO.Uf">
+            <summary>
+            Gets or sets the state abbreviation (UF - Unidade Federativa) of the address.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Address.AddressDeleteDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the information for deleting an address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressDeleteDTO.AddressId">
+            <summary>
+            Gets or sets the identifier of the address to be deleted.
+            </summary>
+            <remarks>
+            This property is bound to the "addressId" parameter in the HTTP request using the [BindProperty] attribute.
+            </remarks>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Address.AddressFilterDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the filter criteria for querying addresses.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressFilterDTO.District">
+            <summary>
+            Gets or sets the district name for filtering addresses.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressFilterDTO.Locality">
+            <summary>
+            Gets or sets the locality (city or town) for filtering addresses.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressFilterDTO.Uf">
+            <summary>
+            Gets or sets the state abbreviation (UF - Unidade Federativa) for filtering addresses.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Address.AddressIdentifierDTO">
+            <summary>
+            Data Transfer Object (DTO) representing an identifier for an address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressIdentifierDTO.AddressId">
+            <summary>
+            Gets or sets the identifier of the address.
+            </summary>
+            <remarks>
+            This property is bound to the "addressId" parameter in the HTTP request using the [BindProperty] attribute.
+            </remarks>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Address.AddressResultDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the result of an address query.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressResultDTO.ZipCode">
+            <summary>
+            Gets or sets the zip code of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressResultDTO.Street">
+            <summary>
+            Gets or sets the street name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressResultDTO.District">
+            <summary>
+            Gets or sets the district name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressResultDTO.Locality">
+            <summary>
+            Gets or sets the locality (city or town) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressResultDTO.Uf">
+            <summary>
+            Gets or sets the state abbreviation (UF - Unidade Federativa) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressResultDTO.Complement">
+            <summary>
+            Gets or sets additional information or complement for the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressResultDTO.Number">
+            <summary>
+            Gets or sets the house or building number of the address.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Address.AddressUpdateDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the information for updating an address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.AddressId">
+            <summary>
+            Gets or sets the identifier of the address to be updated.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.UserId">
+            <summary>
+            Gets or sets the user ID associated with the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.ZipCode">
+            <summary>
+            Gets or sets the zip code of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.Street">
+            <summary>
+            Gets or sets the street name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.District">
+            <summary>
+            Gets or sets the district name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.Locality">
+            <summary>
+            Gets or sets the locality (city or town) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.Number">
+            <summary>
+            Gets or sets the house or building number of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.Complement">
+            <summary>
+            Gets or sets additional information or complement for the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressUpdateDTO.Uf">
+            <summary>
+            Gets or sets the state abbreviation (UF - Unidade Federativa) of the address.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Address.AddressZipCodeDTO">
+            <summary>
+            Data Transfer Object (DTO) representing a zip code for address operations.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Address.AddressZipCodeDTO.ZipCode">
+            <summary>
+            Gets or sets the zip code value.
+            </summary>
+            <remarks>
+            This property is bound to the "zipCode" parameter in the HTTP request using the [BindProperty] attribute.
+            </remarks>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Auth.AuthResultDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the result of an authentication operation.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.AuthResultDTO.UserId">
+            <summary>
+            Gets or sets the user identifier code.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.AuthResultDTO.Name">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.AuthResultDTO.Username">
+            <summary>
+            Gets or sets the username of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.AuthResultDTO.Role">
+            <summary>
+            Gets or sets the role of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.AuthResultDTO.Token">
+            <summary>
+            Gets or sets the JWT (JSON Web Token) issued for the authentication.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.AuthResultDTO.RefreshToken">
+            <summary>
+            Gets or sets the refresh token for the JWT authentication, stored in an HTTP-only cookie.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Auth.ForgotPasswordDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the user email for the "forgot password" operation.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.ForgotPasswordDTO.Email">
+            <summary>
+            Gets or sets the email address of the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Auth.LoginDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the user credentials for the login operation.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.LoginDTO.Username">
+            <summary>
+            Gets or sets the username of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Auth.LoginDTO.Password">
+            <summary>
+            Gets or sets the password of the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Commons.QueryFilter">
+            <summary>
+            Data Transfer Object (DTO) representing a generic query filter with pagination and search functionality.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.DTO.Commons.QueryFilter.#ctor">
+            <summary>
+            Initializes a new instance of the QueryFilter class with default pagination settings.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.QueryFilter.Search">
+            <summary>
+            Gets or sets the search keyword to filter the query results.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.QueryFilter.Page">
+            <summary>
+            Gets or sets the page number for pagination (1-based index).
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.QueryFilter.PerPage">
+            <summary>
+            Gets or sets the number of items per page for pagination.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Commons.ResultDataResponse`1">
+            <summary>
+            Data Transfer Object (DTO) representing a response with data and additional information for API operations.
+            </summary>
+            <typeparam name="TData">The type of data to be included in the response.</typeparam>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultDataResponse`1.TotalPages">
+            <summary>
+            Gets or sets the total number of pages in the data collection.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultDataResponse`1.TotalItems">
+            <summary>
+            Gets or sets the total number of items in the data collection.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultDataResponse`1.Data">
+            <summary>
+            Gets or sets the data to be included in the response.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultDataResponse`1.StatusCode">
+            <summary>
+            Gets or sets the HTTP status code for the response.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultDataResponse`1.Exception">
+            <summary>
+            Gets or sets the exception that occurred during the API operation.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Commons.ResultResponse">
+            <summary>
+            Data Transfer Object (DTO) representing a generic response with a message and details for API operations.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultResponse.Message">
+            <summary>
+            Gets or sets the message describing the result of the API operation.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultResponse.Details">
+            <summary>
+            Gets or sets additional details related to the result of the API operation.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultResponse.IsSuccessStatusCode">
+            <summary>
+            Gets a value indicating whether the response has a successful status code (2xx).
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultResponse.StatusCode">
+            <summary>
+            Gets or sets the HTTP status code for the response.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultResponse.Exception">
+            <summary>
+            Gets or sets the exception that occurred during the API operation, if any.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.DTO.Commons.ResultResponse.ToString">
+            <summary>
+            Returns a JSON string representation of the ResultResponse object.
+            </summary>
+            <returns>A JSON string representing the ResultResponse object.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Commons.ResultResponse`1">
+            <summary>
+            Data Transfer Object (DTO) representing a generic response with data and additional information for API operations.
+            </summary>
+            <typeparam name="TData">The type of data to be included in the response.</typeparam>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Commons.ResultResponse`1.Data">
+            <summary>
+            Gets or sets the data to be included in the response.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Email.EmailRequestDTO">
+            <summary>
+            Data Transfer Object (DTO) representing an email request to be sent.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Email.EmailRequestDTO.ToEmail">
+            <summary>
+            Gets or sets the recipient email address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Email.EmailRequestDTO.Subject">
+            <summary>
+            Gets or sets the subject of the email.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Email.EmailRequestDTO.Body">
+            <summary>
+            Gets or sets the body of the email.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Email.EmailRequestDTO.Attachments">
+            <summary>
+            Gets or sets the list of file attachments to be included in the email.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Import.FileUploadDTO">
+            <summary>
+            Data Transfer Object (DTO) representing a file upload for import.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Import.FileUploadDTO.File">
+            <summary>
+            Gets or sets the file for import.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Notification.NotificationSendDTO">
+            <summary>
+            Data Transfer Object (DTO) representing a notification to be sent.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Notification.NotificationSendDTO.IdUser">
+            <summary>
+            Gets or sets the identifier of the user who will receive the notification.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Notification.NotificationSendDTO.Title">
+            <summary>
+            Gets or sets the title of the notification.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Notification.NotificationSendDTO.Body">
+            <summary>
+            Gets or sets the body of the notification.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the address information to be added for a logged-in user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO.ZipCode">
+            <summary>
+            Gets or sets the zip code of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO.Street">
+            <summary>
+            Gets or sets the street name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO.District">
+            <summary>
+            Gets or sets the district or neighborhood name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO.Locality">
+            <summary>
+            Gets or sets the locality or city name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO.Number">
+            <summary>
+            Gets or sets the house or building number of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO.Complement">
+            <summary>
+            Gets or sets additional information or complement for the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO.Uf">
+            <summary>
+            Gets or sets the state or UF (Unit Federative) of the address.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the address information to be updated for a logged-in user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO.AddressId">
+            <summary>
+            Gets or sets the identifier of the address to be updated.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO.ZipCode">
+            <summary>
+            Gets or sets the zip code of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO.Street">
+            <summary>
+            Gets or sets the street name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO.District">
+            <summary>
+            Gets or sets the district or neighborhood name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO.Locality">
+            <summary>
+            Gets or sets the locality or city name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO.Number">
+            <summary>
+            Gets or sets the house or building number of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO.Complement">
+            <summary>
+            Gets or sets additional information or complement for the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO.Uf">
+            <summary>
+            Gets or sets the state or UF (Unit Federative) of the address.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Register.UserLoggedUpdateDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the user information to be updated for a logged-in user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.UserLoggedUpdateDTO.Name">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.UserLoggedUpdateDTO.Email">
+            <summary>
+            Gets or sets the email of the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Register.UserRedefinePasswordDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the user's current and new password for redefining the password.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.UserRedefinePasswordDTO.CurrentPassword">
+            <summary>
+            Gets or sets the current password of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.UserRedefinePasswordDTO.NewPassword">
+            <summary>
+            Gets or sets the new password for the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Register.UserSelfRegistrationDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the user self-registration information.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.UserSelfRegistrationDTO.Name">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.UserSelfRegistrationDTO.Email">
+            <summary>
+            Gets or sets the email address of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Register.UserSelfRegistrationDTO.Password">
+            <summary>
+            Gets or sets the password of the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Role.IdentifierRoleDTO">
+            <summary>
+            Data Transfer Object (DTO) representing an identifier for a role.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Role.IdentifierRoleDTO.RoleId">
+            <summary>
+            Gets or sets the identifier of the role.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Role.RoleAddDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the information for adding a new role.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Role.RoleAddDTO.Name">
+            <summary>
+            Gets or sets the name of the new role.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Role.RoleDeleteDTO">
+            <summary>
+            Data Transfer Object (DTO) representing an identifier for deleting a role.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Role.RoleDeleteDTO.RoleId">
+            <summary>
+            Gets or sets the identifier of the role to be deleted.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Role.RoleResultDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the result of a role query.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Role.RoleResultDTO.RoleId">
+            <summary>
+            Gets or sets the unique identifier of the role.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Role.RoleResultDTO.Name">
+            <summary>
+            Gets or sets the name of the role.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.Role.RoleUpdateDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the update of a role.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Role.RoleUpdateDTO.RoleId">
+            <summary>
+            Gets or sets the unique identifier of the role.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.Role.RoleUpdateDTO.Name">
+            <summary>
+            Gets or sets the new name of the role.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.User.UserAddDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the addition of a new user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserAddDTO.Name">
+            <summary>
+            Gets or sets the name of the new user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserAddDTO.Email">
+            <summary>
+            Gets or sets the email address of the new user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserAddDTO.Password">
+            <summary>
+            Gets or sets the password of the new user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserAddDTO.RoleId">
+            <summary>
+            Gets or sets the RoleId of the role assigned to the new user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.User.UserDeleteDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the deletion of a user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserDeleteDTO.UserId">
+            <summary>
+            Gets or sets the identifier of the user to be deleted.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.User.UserFilterDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the filtering criteria for retrieving users.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserFilterDTO.Name">
+            <summary>
+            Gets or sets the name of the user to filter by.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserFilterDTO.Email">
+            <summary>
+            Gets or sets the email address of the user to filter by.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserFilterDTO.RoleId">
+            <summary>
+            Gets or sets the RoleId of the user to filter by.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.User.UserIdentifierDTO">
+            <summary>
+            Data Transfer Object (DTO) representing the identifier of a user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserIdentifierDTO.UserId">
+            <summary>
+            Gets or sets the unique identifier of the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.User.UserImportDTO">
+            <summary>
+            Data Transfer Object (DTO) representing user information for importing.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserImportDTO.Name">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserImportDTO.Email">
+            <summary>
+            Gets or sets the email address of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserImportDTO.Password">
+            <summary>
+            Gets or sets the password of the user (in plain text).
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserImportDTO.PasswordBase64Decode">
+            <summary>
+            Gets or sets the Base64 encoded password of the user (to be used for decoding).
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserImportDTO.RoleId">
+            <summary>
+            Gets or sets the role identifier associated with the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.User.UserResultDTO">
+            <summary>
+            Data Transfer Object (DTO) representing user information for retrieval.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserResultDTO.UserId">
+            <summary>
+            Gets or sets the unique identifier of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserResultDTO.Name">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserResultDTO.Email">
+            <summary>
+            Gets or sets the email address of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserResultDTO.Username">
+            <summary>
+            Gets or sets the username of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserResultDTO.Role">
+            <summary>
+            Gets or sets the role associated with the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.User.UserUpdateDTO">
+            <summary>
+            Data Transfer Object (DTO) representing user information for updating.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserUpdateDTO.UserId">
+            <summary>
+            Gets or sets the unique identifier of the user to be updated.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserUpdateDTO.Name">
+            <summary>
+            Gets or sets the updated name of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserUpdateDTO.Email">
+            <summary>
+            Gets or sets the updated email address of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserUpdateDTO.Password">
+            <summary>
+            Gets or sets the updated password of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserUpdateDTO.RoleId">
+            <summary>
+            Gets or sets the updated role identifier associated with the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.User.UserUpdateRoleDTO">
+            <summary>
+            Data Transfer Object (DTO) representing user information for updating user role.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserUpdateRoleDTO.UserId">
+            <summary>
+            Gets or sets the unique identifier of the user whose role is to be updated.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.User.UserUpdateRoleDTO.RoleId">
+            <summary>
+            Gets or sets the new role identifier to be assigned to the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.ValidationCode.ValidationCodeValidateDTO">
+            <summary>
+            Data Transfer Object (DTO) representing validation code information for validation.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ValidationCode.ValidationCodeValidateDTO.Code">
+            <summary>
+            Gets or sets the validation code to be validated.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO">
+            <summary>
+            Data Transfer Object (DTO) representing address information retrieved from the ViaCep API.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Cep">
+            <summary>
+            Gets or sets the postal code (CEP) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Logradouro">
+            <summary>
+            Gets or sets the street name (logradouro) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Complemento">
+            <summary>
+            Gets or sets the address complement (complemento) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Bairro">
+            <summary>
+            Gets or sets the neighborhood (bairro) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Localidade">
+            <summary>
+            Gets or sets the city name (localidade) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Uf">
+            <summary>
+            Gets or sets the state abbreviation (UF) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Ibge">
+            <summary>
+            Gets or sets the IBGE code (ibge) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Gia">
+            <summary>
+            Gets or sets the GIA code (gia) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Ddd">
+            <summary>
+            Gets or sets the area code (DDD) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.DTO.ViaCep.ViaCepAddressResponseDTO.Siafi">
+            <summary>
+            Gets or sets the SIAFI code (siafi) of the address.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Entities.Address">
+            <summary>
+            Represents an address entity.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.UserId">
+            <summary>
+            Gets or sets the identifier of the associated user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.User">
+            <summary>
+            Gets or sets the associated user for this address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.ZipCode">
+            <summary>
+            Gets or sets the ZIP code of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.Street">
+            <summary>
+            Gets or sets the street name of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.District">
+            <summary>
+            Gets or sets the district (neighborhood) of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.Locality">
+            <summary>
+            Gets or sets the city or locality of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.Number">
+            <summary>
+            Gets or sets the house or building number of the address.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.Complement">
+            <summary>
+            Gets or sets additional address information or complement.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Address.Uf">
+            <summary>
+            Gets or sets the state abbreviation (UF) of the address.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Entities.BaseEntity">
+            <summary>
+            Represents a base entity that provides common properties for all entities.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Entities.BaseEntity.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CeciDapper.Domain.Entities.BaseEntity"/> class.
+            Sets default values for common properties.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.BaseEntity.Id">
+            <summary>
+            Gets or sets the unique identifier for the entity.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.BaseEntity.Active">
+            <summary>
+            Gets or sets a value indicating whether the entity is active.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.BaseEntity.RegistrationDate">
+            <summary>
+            Gets or sets the registration date of the entity.
+            The date is converted to the "E. South America Standard Time" time zone.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Entities.RefreshToken">
+            <summary>
+            Represents a refresh token entity used for user authentication token management.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.Token">
+            <summary>
+            Gets or sets the refresh token value.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.Expires">
+            <summary>
+            Gets or sets the expiration date and time of the refresh token.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.IsExpired">
+            <summary>
+            Gets a value indicating whether the refresh token is expired.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.CreatedByIp">
+            <summary>
+            Gets or sets the IP address from which the refresh token was created.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.Revoked">
+            <summary>
+            Gets or sets the date and time when the refresh token was revoked.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.RevokedByIp">
+            <summary>
+            Gets or sets the IP address from which the refresh token was revoked.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.ReplacedByToken">
+            <summary>
+            Gets or sets the replacement token for this refresh token.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.IsActive">
+            <summary>
+            Gets a value indicating whether the refresh token is currently active.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.UserId">
+            <summary>
+            Gets or sets the identifier of the user associated with the refresh token.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RefreshToken.User">
+            <summary>
+            Gets or sets the navigation property to the user associated with the refresh token.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Entities.RegistrationToken">
+            <summary>
+            Represents a registration token entity used for user registration confirmation.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RegistrationToken.UserId">
+            <summary>
+            Gets or sets the identifier of the user associated with the registration token.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RegistrationToken.Token">
+            <summary>
+            Gets or sets the registration token value.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.RegistrationToken.User">
+            <summary>
+            Gets or sets the navigation property to the user associated with the registration token.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Entities.Role">
+            <summary>
+            Represents a role entity for user authorization and access control.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Role.Name">
+            <summary>
+            Gets or sets the name of the role.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.Role.User">
+            <summary>
+            Gets or sets the collection of users associated with this role.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Entities.User">
+            <summary>
+            Represents a user entity in the system.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.Name">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.Email">
+            <summary>
+            Gets or sets the email address of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.Password">
+            <summary>
+            Gets or sets the password of the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.RoleId">
+            <summary>
+            Gets or sets the identifier of the role associated with the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.Validated">
+            <summary>
+            Gets or sets a value indicating whether the user's email has been validated.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.ChangePassword">
+            <summary>
+            Gets or sets a value indicating whether the user needs to change their password.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.Role">
+            <summary>
+            Gets or sets the role associated with the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.RefreshToken">
+            <summary>
+            Gets or sets the collection of refresh tokens associated with the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.RegistrationToken">
+            <summary>
+            Gets or sets the collection of registration tokens associated with the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.ValidationCode">
+            <summary>
+            Gets or sets the collection of validation codes associated with the user.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.User.Address">
+            <summary>
+            Gets or sets the collection of addresses associated with the user.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Entities.ValidationCode">
+            <summary>
+            Represents a validation code entity used for user validation.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.ValidationCode.Code">
+            <summary>
+            Gets or sets the validation code.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.ValidationCode.Expires">
+            <summary>
+            Gets or sets the expiration date and time of the validation code.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.ValidationCode.IsExpired">
+            <summary>
+            Gets a value indicating whether the validation code has expired.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.ValidationCode.IsActive">
+            <summary>
+            Gets a value indicating whether the validation code is currently active.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.ValidationCode.UserId">
+            <summary>
+            Gets or sets the identifier of the user associated with the validation code.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Entities.ValidationCode.User">
+            <summary>
+            Gets or sets the user associated with the validation code.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Repository.IAddressRepository">
+            <summary>
+            Represents the repository interface for performing CRUD operations on Address entities.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IAddressRepository.GetLoggedUserAddressesAsync(System.Int32,CeciDapper.Domain.DTO.Address.AddressFilterDTO)">
+            <summary>
+            Retrieves a collection of addresses for the specified logged-in user, based on filter conditions.
+            </summary>
+            <param name="userId">The identifier of the logged-in user.</param>
+            <param name="filter">The filter conditions to apply to the addresses.</param>
+            <returns>A collection of addresses that match the filter conditions.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IAddressRepository.GetTotalLoggedUserAddressesAsync(System.Int32,CeciDapper.Domain.DTO.Address.AddressFilterDTO)">
+            <summary>
+            Retrieves the total count of addresses for the specified logged-in user, based on filter conditions.
+            </summary>
+            <param name="userId">The identifier of the logged-in user.</param>
+            <param name="filter">The filter conditions to apply to the addresses.</param>
+            <returns>The total count of addresses that match the filter conditions.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IAddressRepository.GetByFilterAsync(CeciDapper.Domain.DTO.Address.AddressFilterDTO)">
+            <summary>
+            Retrieves a collection of addresses based on filter conditions.
+            </summary>
+            <param name="filter">The filter conditions to apply to the addresses.</param>
+            <returns>A collection of addresses that match the filter conditions.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IAddressRepository.GetTotalByFilterAsync(CeciDapper.Domain.DTO.Address.AddressFilterDTO)">
+            <summary>
+            Retrieves the total count of addresses based on filter conditions.
+            </summary>
+            <param name="filter">The filter conditions to apply to the addresses.</param>
+            <returns>The total count of addresses that match the filter conditions.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1">
+            <summary>
+            Represents the base repository interface for CRUD operations on entities.
+            </summary>
+            <typeparam name="TEntity">The type of entity that the repository works with.</typeparam>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1.AddAsync(`0)">
+            <summary>
+            Adds a new entity asynchronously.
+            </summary>
+            <param name="obj">The entity to be added.</param>
+            <returns>The added entity.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1.AddRangeAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Adds a range of entities asynchronously.
+            </summary>
+            <param name="obj">The collection of entities to be added.</param>
+            <returns>The added collection of entities.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1.UpdateAsync(`0)">
+            <summary>
+            Updates an existing entity asynchronously.
+            </summary>
+            <param name="obj">The entity to be updated.</param>
+            <returns>True if the entity was successfully updated, otherwise false.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1.DeleteAsync(System.Int32)">
+            <summary>
+            Deletes an entity by its identifier asynchronously.
+            </summary>
+            <param name="id">The identifier of the entity to be deleted.</param>
+            <returns>True if the entity was successfully deleted, otherwise false.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1.GetAllAsync">
+            <summary>
+            Retrieves all entities asynchronously.
+            </summary>
+            <returns>A collection of all entities.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1.GetAsync(System.String)">
+            <summary>
+            Retrieves entities based on the specified query condition asynchronously.
+            </summary>
+            <param name="queryCondition">The query condition to filter entities.</param>
+            <returns>A collection of entities that match the query condition.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1.GetFirstOrDefaultAsync(System.String)">
+            <summary>
+            Retrieves the first entity that matches the specified query condition asynchronously.
+            </summary>
+            <param name="queryCondition">The query condition to filter entities.</param>
+            <returns>The first entity that matches the query condition, or null if not found.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IBaseRepository`1.GetTotalAsync(System.String)">
+            <summary>
+            Retrieves the total count of entities that match the specified query condition asynchronously.
+            </summary>
+            <param name="queryCondition">The query condition to filter entities.</param>
+            <returns>The total count of entities that match the query condition.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Repository.IRefreshTokenRepository">
+            <summary>
+            Represents the repository interface for performing CRUD operations on RefreshToken entities.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Repository.IRegistrationTokenRepository">
+            <summary>
+            Represents the repository interface for performing CRUD operations on RegistrationToken entities.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Repository.IRoleRepository">
+            <summary>
+            Represents the repository interface for performing CRUD operations on Role entities and additional methods related to roles.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IRoleRepository.GetBasicProfile">
+            <summary>
+            Retrieves the basic profile role.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result contains the basic profile role.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Repository.IUnitOfWork">
+            <summary>
+            Represents a unit of work interface for managing repositories and coordinating transactions.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Interfaces.Repository.IUnitOfWork.User">
+            <summary>
+            Gets the repository for managing User entities.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Interfaces.Repository.IUnitOfWork.Role">
+            <summary>
+            Gets the repository for managing Role entities.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Interfaces.Repository.IUnitOfWork.RefreshToken">
+            <summary>
+            Gets the repository for managing RefreshToken entities.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Interfaces.Repository.IUnitOfWork.RegistrationToken">
+            <summary>
+            Gets the repository for managing RegistrationToken entities.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Interfaces.Repository.IUnitOfWork.ValidationCode">
+            <summary>
+            Gets the repository for managing ValidationCode entities.
+            </summary>
+        </member>
+        <member name="P:CeciDapper.Domain.Interfaces.Repository.IUnitOfWork.Address">
+            <summary>
+            Gets the repository for managing Address entities.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Repository.IUserRepository">
+            <summary>
+            Represents a repository interface for managing User entities.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IUserRepository.GetUserByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a user entity by its unique identifier asynchronously.
+            </summary>
+            <param name="id">The unique identifier of the user to retrieve.</param>
+            <returns>A task representing the asynchronous operation. The retrieved user entity or null if not found.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IUserRepository.GetByFilterAsync(CeciDapper.Domain.DTO.User.UserFilterDTO)">
+            <summary>
+            Retrieves a collection of user entities based on the provided filter asynchronously.
+            </summary>
+            <param name="filter">The filter criteria for retrieving user entities.</param>
+            <returns>A task representing the asynchronous operation. A collection of user entities matching the filter.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Repository.IUserRepository.GetTotalByFilterAsync(CeciDapper.Domain.DTO.User.UserFilterDTO)">
+            <summary>
+            Retrieves the total count of user entities based on the provided filter asynchronously.
+            </summary>
+            <param name="filter">The filter criteria for counting user entities.</param>
+            <returns>A task representing the asynchronous operation. The total count of user entities matching the filter.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Repository.IValidationCodeRepository">
+            <summary>
+            Represents the repository interface for performing CRUD operations on ValidationCode entities.
+            </summary>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.External.IFirebaseService">
+            <summary>
+            Represents a service interface for interacting with the Firebase Cloud Messaging (FCM) service.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.External.IFirebaseService.SendNotificationAsync(System.String,System.String,System.String)">
+            <summary>
+            Sends a notification asynchronously to the specified device token.
+            </summary>
+            <param name="token">The device token to which the notification will be sent.</param>
+            <param name="title">The title of the notification.</param>
+            <param name="body">The body content of the notification.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the success or failure of the notification sending.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.External.ISendGridService">
+            <summary>
+            Represents a service interface for sending emails using the SendGrid service.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.External.ISendGridService.SendEmailAsync(System.String,System.String,System.String)">
+            <summary>
+            Sends an email asynchronously.
+            </summary>
+            <param name="email">The recipient's email address.</param>
+            <param name="subject">The subject of the email.</param>
+            <param name="message">The content of the email message.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the success or failure of the email sending.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.External.IViaCepService">
+            <summary>
+            Represents a service interface for interacting with the ViaCep API to retrieve address information by zip code.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.External.IViaCepService.GetAddressByZipCodeAsync(System.String)">
+            <summary>
+            Retrieves address information asynchronously based on a specified zip code.
+            </summary>
+            <param name="zipCode">The zip code to retrieve address information for.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing the retrieved address information from ViaCep.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IAddressService">
+            <summary>
+            Represents a service interface for managing address-related operations.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAddressService.GetAddressByZipCodeAsync(CeciDapper.Domain.DTO.Address.AddressZipCodeDTO)">
+            <summary>
+            Retrieves address information asynchronously based on a specified zip code.
+            </summary>
+            <param name="obj">The DTO containing the zip code to retrieve address information for.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing the retrieved address information.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAddressService.AddAsync(CeciDapper.Domain.DTO.Address.AddressAddDTO)">
+            <summary>
+            Adds a new address asynchronously.
+            </summary>
+            <param name="obj">The DTO containing the address information to add.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the operation.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAddressService.UpdateAsync(CeciDapper.Domain.DTO.Address.AddressUpdateDTO)">
+            <summary>
+            Updates an existing address asynchronously.
+            </summary>
+            <param name="obj">The DTO containing the updated address information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the operation.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAddressService.DeleteAsync(System.Int32)">
+            <summary>
+            Deletes an address asynchronously based on its identifier.
+            </summary>
+            <param name="id">The identifier of the address to delete.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the operation.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAddressService.GetAsync(CeciDapper.Domain.DTO.Address.AddressFilterDTO)">
+            <summary>
+            Retrieves a list of addresses asynchronously based on the provided filter.
+            </summary>
+            <param name="filter">The DTO containing the filter parameters.</param>
+            <returns>A task representing the asynchronous operation. A ResultDataResponse containing the retrieved addresses.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAddressService.GetByIdAsync(System.Int32)">
+            <summary>
+            Retrieves an address by its identifier asynchronously.
+            </summary>
+            <param name="id">The identifier of the address to retrieve.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing the retrieved address.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IAuthService">
+            <summary>
+            Represents a service interface for authentication and token management.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAuthService.AuthenticateAsync(CeciDapper.Domain.DTO.Auth.LoginDTO,System.String)">
+            <summary>
+            Authenticates a user asynchronously using their login credentials.
+            </summary>
+            <param name="model">The DTO containing the user's login credentials.</param>
+            <param name="ipAddress">The IP address of the user.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing the authentication result.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAuthService.RefreshTokenAsync(System.String,System.String)">
+            <summary>
+            Generates a new access token asynchronously based on a refresh token.
+            </summary>
+            <param name="token">The refresh token used to generate a new access token.</param>
+            <param name="ipAddress">The IP address of the user.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing the new authentication result.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAuthService.RevokeTokenAsync(System.String,System.String)">
+            <summary>
+            Revokes a user's token asynchronously, making it invalid for future use.
+            </summary>
+            <param name="token">The token to revoke.</param>
+            <param name="ipAddress">The IP address of the user.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the operation.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IAuthService.ForgotPasswordAsync(CeciDapper.Domain.DTO.Auth.ForgotPasswordDTO)">
+            <summary>
+            Initiates the process for recovering a forgotten password.
+            </summary>
+            <param name="model">The DTO containing the user's email address for password recovery.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the operation.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IEmailService">
+            <summary>
+            Represents a service interface for sending emails.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IEmailService.SendEmailAsync(CeciDapper.Domain.DTO.Email.EmailRequestDTO)">
+            <summary>
+            Sends an email asynchronously using the provided email request.
+            </summary>
+            <param name="emailRequest">The DTO containing email content and recipient information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the email sending operation.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IImportService">
+            <summary>
+            Represents a service interface for importing data, specifically users.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IImportService.ImportUsersAsync(CeciDapper.Domain.DTO.Import.FileUploadDTO)">
+            <summary>
+            Imports users asynchronously using the provided file upload data.
+            </summary>
+            <param name="model">The DTO containing file upload information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the import operation.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.INotificationService">
+            <summary>
+            Represents a service interface for sending notifications.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.INotificationService.SendAsync(CeciDapper.Domain.DTO.Notification.NotificationSendDTO)">
+            <summary>
+            Sends a notification asynchronously using the provided notification data.
+            </summary>
+            <param name="obj">The DTO containing notification information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the notification sending operation.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IRegisterService">
+            <summary>
+            Represents a service interface for user registration and related operations.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.GetLoggedInUserAsync">
+            <summary>
+            Retrieves the information of the currently logged-in user.
+            </summary>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing user information.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.SelfRegistrationAsync(CeciDapper.Domain.DTO.Register.UserSelfRegistrationDTO)">
+            <summary>
+            Initiates a self-registration process for a new user.
+            </summary>
+            <param name="obj">The DTO containing self-registration information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the self-registration process.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.UpdateLoggedUserAsync(CeciDapper.Domain.DTO.Register.UserLoggedUpdateDTO)">
+            <summary>
+            Updates the information of the currently logged-in user.
+            </summary>
+            <param name="obj">The DTO containing updated user information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the user information update.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.RedefinePasswordAsync(CeciDapper.Domain.DTO.Register.UserRedefinePasswordDTO)">
+            <summary>
+            Initiates a password redefinition process for the currently logged-in user.
+            </summary>
+            <param name="obj">The DTO containing password redefinition information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the password redefinition process.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.AddLoggedUserAddressAsync(CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO)">
+            <summary>
+            Adds an address to the currently logged-in user's profile.
+            </summary>
+            <param name="obj">The DTO containing address information to be added.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the address addition.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.UpdateLoggedUserAddressAsync(CeciDapper.Domain.DTO.Register.AddressLoggedUserUpdateDTO)">
+            <summary>
+            Updates an address in the currently logged-in user's profile.
+            </summary>
+            <param name="obj">The DTO containing updated address information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the address update.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.InactivateLoggedUserAddressAsync(CeciDapper.Domain.DTO.Address.AddressDeleteDTO)">
+            <summary>
+            Inactivates an address in the currently logged-in user's profile.
+            </summary>
+            <param name="obj">The DTO containing information about the address to be inactivated.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the outcome of the address inactivation.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.GetLoggedUserAddressesAsync(CeciDapper.Domain.DTO.Address.AddressFilterDTO)">
+            <summary>
+            Retrieves a list of addresses associated with the currently logged-in user's profile.
+            </summary>
+            <param name="filter">The DTO containing filtering criteria for retrieving addresses.</param>
+            <returns>A task representing the asynchronous operation. A ResultDataResponse containing a list of addresses.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRegisterService.GetLoggedUserAddressAsync(CeciDapper.Domain.DTO.Address.AddressIdentifierDTO)">
+            <summary>
+            Retrieves detailed information about a specific address associated with the currently logged-in user's profile.
+            </summary>
+            <param name="obj">The DTO containing identifier information for the address.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing detailed address information.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IReportService">
+            <summary>
+            Represents a service interface for generating reports related to user information.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IReportService.GenerateUsersReport(CeciDapper.Domain.DTO.User.UserFilterDTO)">
+            <summary>
+            Generates a report containing user information based on the provided filtering criteria.
+            </summary>
+            <param name="filter">The DTO containing filtering criteria for generating the report.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing the generated report as a byte array.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IRoleService">
+            <summary>
+            Represents a service interface for managing user roles.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRoleService.GetAsync">
+            <summary>
+            Retrieves a collection of user roles.
+            </summary>
+            <returns>A task representing the asynchronous operation. A ResultDataResponse containing the collection of role information.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRoleService.AddAsync(CeciDapper.Domain.DTO.Role.RoleAddDTO)">
+            <summary>
+            Adds a new user role.
+            </summary>
+            <param name="obj">The DTO containing the role information to be added.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the result of the addition.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRoleService.DeleteAsync(System.Int32)">
+            <summary>
+            Deletes a user role based on its identifier.
+            </summary>
+            <param name="id">The unique identifier of the role to be deleted.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the result of the deletion.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRoleService.UpdateAsync(CeciDapper.Domain.DTO.Role.RoleUpdateDTO)">
+            <summary>
+            Updates the information of an existing user role.
+            </summary>
+            <param name="obj">The DTO containing the updated role information.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse indicating the result of the update.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IRoleService.GetByIdAsync(System.Int32)">
+            <summary>
+            Retrieves detailed information about a user role based on its identifier.
+            </summary>
+            <param name="id">The unique identifier of the role to retrieve.</param>
+            <returns>A task representing the asynchronous operation. A ResultResponse containing the detailed role information.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.ITokenService">
+            <summary>
+            Represents a service interface for generating authentication tokens.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.ITokenService.GenerateToken(CeciDapper.Domain.DTO.User.UserResultDTO)">
+            <summary>
+            Generates an authentication token based on the provided user information.
+            </summary>
+            <param name="model">The DTO containing the user information.</param>
+            <returns>A string representing the generated authentication token.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IUserService">
+            <summary>
+            Represents a service interface for managing user-related operations.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IUserService.GetAsync(CeciDapper.Domain.DTO.User.UserFilterDTO)">
+            <summary>
+            Retrieves a collection of users based on the provided filter.
+            </summary>
+            <param name="filter">The filter criteria to apply.</param>
+            <returns>A task representing the asynchronous operation with the result of user data.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IUserService.AddAsync(CeciDapper.Domain.DTO.User.UserAddDTO)">
+            <summary>
+            Adds a new user with the provided information.
+            </summary>
+            <param name="obj">The DTO containing the user information to be added.</param>
+            <returns>A task representing the asynchronous operation with the result of the addition.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IUserService.DeleteAsync(CeciDapper.Domain.DTO.User.UserDeleteDTO)">
+            <summary>
+            Deletes a user based on the provided information.
+            </summary>
+            <param name="obj">The DTO containing the user information to be deleted.</param>
+            <returns>A task representing the asynchronous operation with the result of the deletion.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IUserService.UpdateAsync(CeciDapper.Domain.DTO.User.UserUpdateDTO)">
+            <summary>
+            Updates an existing user's information.
+            </summary>
+            <param name="obj">The DTO containing the updated user information.</param>
+            <returns>A task representing the asynchronous operation with the result of the update.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IUserService.GetByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a user's information based on their unique identifier.
+            </summary>
+            <param name="id">The unique identifier of the user to retrieve.</param>
+            <returns>A task representing the asynchronous operation with the result of the user data.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IUserService.UpdateRoleAsync(CeciDapper.Domain.DTO.User.UserUpdateRoleDTO)">
+            <summary>
+            Updates the role of a user.
+            </summary>
+            <param name="obj">The DTO containing the user's updated role information.</param>
+            <returns>A task representing the asynchronous operation with the result of the role update.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Interfaces.Service.IValidationCodeService">
+            <summary>
+            Represents a service interface for managing validation code-related operations.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IValidationCodeService.SendAsync">
+            <summary>
+            Sends a validation code to the user.
+            </summary>
+            <returns>A task representing the asynchronous operation with the result of the code sending.</returns>
+        </member>
+        <member name="M:CeciDapper.Domain.Interfaces.Service.IValidationCodeService.ValidateCodeAsync(CeciDapper.Domain.DTO.ValidationCode.ValidationCodeValidateDTO)">
+            <summary>
+            Validates a provided validation code.
+            </summary>
+            <param name="obj">The DTO containing the validation code to be validated.</param>
+            <returns>A task representing the asynchronous operation with the result of the validation.</returns>
+        </member>
+        <member name="T:CeciDapper.Domain.Mapping.MappingProfile">
+            <summary>
+            Represents the AutoMapper profile for mapping between DTOs and entities.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.Domain.Mapping.MappingProfile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CeciDapper.Domain.Mapping.MappingProfile"/> class.
+            Configures AutoMapper mappings between various DTOs and entity classes.
+            </summary>
+        </member>
+    </members>
+</doc>

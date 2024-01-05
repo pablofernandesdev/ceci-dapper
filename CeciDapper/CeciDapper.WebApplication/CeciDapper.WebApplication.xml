@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CeciDapper.WebApplication</name>
+    </assembly>
+    <members>
+        <member name="T:CeciDapper.WebApplication.Attribute.ValidateModelStateAttribute">
+            <summary>
+            Attribute used to validate the state of the model before executing an action in an ASP.NET Core API.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Attribute.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Method executed before an action is executed.
+            Checks if the model state is valid and, if not, returns an error response with details of the invalid model.
+            </summary>
+            <param name="context">The execution context of the action.</param>
+        </member>
+        <member name="T:CeciDapper.WebApplication.Controllers.AddressController">
+            <summary>
+            Controller class for managing address-related operations in the API.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AddressController.#ctor(CeciDapper.Domain.Interfaces.Service.IAddressService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CeciDapper.WebApplication.Controllers.AddressController"/> class.
+            </summary>
+            <param name="addressService">The address service used for address-related operations.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AddressController.GetByZipCode(CeciDapper.Domain.DTO.Address.AddressZipCodeDTO)">
+            <summary>
+            Retrieves an address by its ZIP code.
+            </summary>
+            <param name="model">The ZIP code of the address to retrieve.</param>
+            <returns>The result of the operation as an action result.</returns>
+            <response code="200">Returns success when get address</response>
+            <response code="400">Bad request</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AddressController.Add(CeciDapper.Domain.DTO.Address.AddressAddDTO)">
+            <summary>
+            Adds a new address.
+            </summary>
+            <param name="model">The address to add.</param>
+            <returns>The result of the operation as an action result.</returns>
+            <response code="200">Returns success when create address</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AddressController.Update(CeciDapper.Domain.DTO.Address.AddressUpdateDTO)">
+            <summary>
+            Updates an existing address.
+            </summary>
+            <param name="model">The address to update.</param>
+            <returns>The result of the operation as an action result.</returns>
+            <response code="200">Returns success when update address</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AddressController.Delete(CeciDapper.Domain.DTO.Address.AddressDeleteDTO)">
+            <summary>
+            Deletes an address.
+            </summary>
+            <param name="model">The identifier of the address to delete.</param>
+            <returns>The result of the operation as an action result.</returns>
+            <response code="200">Returns success when deleted address</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AddressController.Get(CeciDapper.Domain.DTO.Address.AddressFilterDTO)">
+            <summary>
+            Retrieves a list of addresses based on filtering criteria.
+            </summary>
+            <param name="model">The filtering criteria for the addresses.</param>
+            <returns>The result of the operation as an action result.</returns>
+            <response code="200">Returns success when get all adresses</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>  
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AddressController.GetById(CeciDapper.Domain.DTO.Address.AddressIdentifierDTO)">
+            <summary>
+            Retrieves an address by its identifier.
+            </summary>
+            <param name="model">The identifier of the address to retrieve.</param>
+            <returns>The result of the operation as an action result.</returns>
+            <response code="200">Returns success when get address by id</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="T:CeciDapper.WebApplication.Controllers.AuthController">
+            <summary>
+            Controller for user authentication and token management.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.#ctor(CeciDapper.Domain.Interfaces.Service.IAuthService,CeciDapper.Domain.Interfaces.Service.IValidationCodeService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CeciDapper.WebApplication.Controllers.AuthController"/> class.
+            </summary>
+            <param name="authService">The authentication service.</param>
+            <param name="validationCodeService">The validation code service.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.Auth(CeciDapper.Domain.DTO.Auth.LoginDTO)">
+            <summary>
+            Authenticates a user and returns an authentication token.
+            </summary>
+            <param name="model">The login credentials of the user.</param>
+            <returns>The result of the authentication as an action result.</returns>
+            <response code="200">Returns success request autentication</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.RefreshToken">
+            <summary>
+            Refreshes the user's authentication token using the provided refresh token.
+            </summary>
+            <returns>The result of the token refresh operation as an action result.</returns>
+            <response code="200">Returns success request autentication</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.RevokeToken">
+            <summary>
+            Revokes the user's refresh token, effectively logging the user out.
+            </summary>
+            <returns>The result of the token revocation operation as an action result.</returns>
+            <response code="200">Returns success revoking auth token</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.ForgotPassword(CeciDapper.Domain.DTO.Auth.ForgotPasswordDTO)">
+            <summary>
+            Request user password recovery
+            </summary>
+            <param name="model"></param>
+            <returns>Success when requesting password recovery</returns>
+            <response code="200">Returns when requesting password recovery</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.SendValidationCode">
+            <summary>
+            Sends a validation code to the authenticated user.
+            </summary>
+            <returns>The result of the validation code sending operation as an action result.</returns>
+            <response code="200">Returns when requesting validation code</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.ValidateValidationCode(CeciDapper.Domain.DTO.ValidationCode.ValidationCodeValidateDTO)">
+            <summary>
+            Validates a validation code entered by the authenticated user.
+            </summary>
+            <param name="model">The validation code to validate.</param>
+            <returns>The result of the validation code validation operation as an action result.</returns>
+            <response code="200">Returns when validating validation code</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.SetTokenCookie(System.String)">
+            <summary>
+            Sets the authentication token as a cookie in the response.
+            </summary>
+            <param name="token">The authentication token.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.AuthController.IpAddress">
+            <summary>
+            Retrieves the client's IP address from the request headers.
+            </summary>
+            <returns>The client's IP address.</returns>
+        </member>
+        <member name="T:CeciDapper.WebApplication.Controllers.RegisterController">
+            <summary>
+            Controller responsible for user registration operations.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.#ctor(CeciDapper.Domain.Interfaces.Service.IRegisterService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CeciDapper.WebApplication.Controllers.RegisterController"/> class.
+            </summary>
+            <param name="registerService">An instance of the register service.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.SelfRegistration(CeciDapper.Domain.DTO.Register.UserSelfRegistrationDTO)">
+            <summary>
+            Performs self-registration of a user.
+            </summary>
+            <param name="model">User data for self-registration.</param>
+            <returns>Result of the self-registration operation.</returns>
+            <response code="200">Returns success when creating a new item</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.UpdateLoggedInUser(CeciDapper.Domain.DTO.Register.UserLoggedUpdateDTO)">
+            <summary>
+            Updates the logged-in user.
+            </summary>
+            <param name="model">Updated user data.</param>
+            <returns>Result of the update operation.</returns>
+            <response code="200">Returns success when updating user logged</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.GetLoggedInUser">
+            <summary>
+            Retrieves the logged-in user.
+            </summary>
+            <returns>Result containing the logged-in user information.</returns>
+            <response code="200">Returns success when get logged in user</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.RedefinePassword(CeciDapper.Domain.DTO.Register.UserRedefinePasswordDTO)">
+            <summary>
+            Redefines the password for the user.
+            </summary>
+            <param name="model">Data for password redefinition.</param>
+            <returns>Result of the password redefinition operation.</returns>
+            <response code="200">Returns success when redefine user password</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.AddLoggedInUserAddressAsync(CeciDapper.Domain.DTO.Register.AddressLoggedUserAddDTO)">
+            <summary>
+            Adds an address for the logged-in user.
+            </summary>
+            <param name="model">The address data to be added.</param>
+            <returns>An action result containing the add address result.</returns>
+            <response code="200">Returns success when add logged user address</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.UpdateLoggedInUserAddress(CeciDapper.Domain.DTO.Register.UserLoggedUpdateDTO)">
+            <summary>
+            Updates the address for the logged-in user.
+            </summary>
+            <param name="model">The updated address data.</param>
+            <returns>An action result containing the update address result.</returns>
+            <response code="200">Returns success when updating logged user address</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.DeleteLoggedInUserAddress(CeciDapper.Domain.DTO.Address.AddressDeleteDTO)">
+            <summary>
+            Deletes the specified address for the logged-in user.
+            </summary>
+            <param name="model">The address data to be deleted.</param>
+            <returns>An action result containing the delete address result.</returns>
+            <response code="200">Returns success when deleting logged user address</response>
+            <response code="400">Returns error if the request fails</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.GetLoggedInUserAddresss(CeciDapper.Domain.DTO.Address.AddressFilterDTO)">
+            <summary>
+            Retrieves all addresses for the logged-in user.
+            </summary>
+            <param name="model">The address filter data.</param>
+            <returns>An action result containing the user addresses.</returns>
+            <response code="200">Returns success when get logged in user addresses</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RegisterController.GetLoggedInUserAddress(CeciDapper.Domain.DTO.Address.AddressIdentifierDTO)">
+            <summary>
+            Retrieves a specific address for the logged-in user.
+            </summary>
+            <param name="model">The address identifier data.</param>
+            <returns>An action result containing the user address.</returns>
+            <response code="200">Returns success when get logged in user address</response>
+            <response code="401">Not authorized</response>
+            <response code="403">Forbidden</response>
+            <response code="500">Internal server error</response>   
+        </member>
+        <member name="T:CeciDapper.WebApplication.Controllers.ReportController">
+            <summary>
+            Controller for generating reports.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.ReportController.#ctor(CeciDapper.Domain.Interfaces.Service.IReportService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CeciDapper.WebApplication.Controllers.ReportController"/> class.
+            </summary>
+            <param name="reportService">The report service.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.ReportController.GenerateUsersReport(CeciDapper.Domain.DTO.User.UserFilterDTO)">
+            <summary>
+            Generates a report of users based on the provided filter.
+            </summary>
+            <param name="filter">The filter parameters for the report.</param>
+            <returns>An action result containing the users report file.</returns>
+            <response code="200">Returns success when the users report is generated.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>   
+        </member>
+        <member name="T:CeciDapper.WebApplication.Controllers.RoleController">
+            <summary>
+            Controller for managing roles.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RoleController.#ctor(CeciDapper.Domain.Interfaces.Service.IRoleService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CeciDapper.WebApplication.Controllers.RoleController"/> class.
+            </summary>
+            <param name="roleService">The role service.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RoleController.Add(CeciDapper.Domain.DTO.Role.RoleAddDTO)">
+            <summary>
+            Adds a new role.
+            </summary>
+            <param name="model">The role details.</param>
+            <returns>An action result indicating the success of the role creation.</returns>
+            <response code="200">Returns success when the role is created.</response>
+            <response code="400">Returns an error if the request fails.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RoleController.Update(CeciDapper.Domain.DTO.Role.RoleUpdateDTO)">
+            <summary>
+            Updates an existing role.
+            </summary>
+            <param name="model">The updated role details.</param>
+            <returns>An action result indicating the success of the role update.</returns>
+            <response code="200">Returns success when the role is updated.</response>
+            <response code="400">Returns an error if the request fails.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RoleController.Delete(CeciDapper.Domain.DTO.Role.RoleDeleteDTO)">
+            <summary>
+            Deletes a role.
+            </summary>
+            <param name="model">The role identifier.</param>
+            <returns>An action result indicating the success of the role deletion.</returns>
+            <response code="200">Returns success when the role is deleted.</response>
+            <response code="400">Returns an error if the request fails.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RoleController.Get">
+            <summary>
+            Retrieves all roles.
+            </summary>
+            <returns>An action result containing the list of roles.</returns>
+            <response code="200">Returns success with the list of roles.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.RoleController.GetById(CeciDapper.Domain.DTO.Role.IdentifierRoleDTO)">
+            <summary>
+            Retrieves a role by its identifier.
+            </summary>
+            <param name="model">The role identifier.</param>
+            <returns>An action result containing the role details.</returns>
+            <response code="200">Returns success with the role details.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>   
+        </member>
+        <member name="T:CeciDapper.WebApplication.Controllers.UserController">
+            <summary>
+            Controller for managing users.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.UserController.#ctor(CeciDapper.Domain.Interfaces.Service.IUserService,CeciDapper.Domain.Interfaces.Service.IImportService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CeciDapper.WebApplication.Controllers.UserController"/> class.
+            </summary>
+            <param name="userService">The user service.</param>
+            <param name="importService">The import service.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.UserController.Add(CeciDapper.Domain.DTO.User.UserAddDTO)">
+            <summary>
+            Adds a new user.
+            </summary>
+            <param name="model">The user details.</param>
+            <returns>An action result indicating the success of the user creation.</returns>
+            <response code="200">Returns success when the user is created.</response>
+            <response code="400">Returns an error if the request fails.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.UserController.Update(CeciDapper.Domain.DTO.User.UserUpdateDTO)">
+            <summary>
+            Updates an existing user.
+            </summary>
+            <param name="model">The updated user details.</param>
+            <returns>An action result indicating the success of the user update.</returns>
+            <response code="200">Returns success when the user is updated.</response>
+            <response code="400">Returns an error if the request fails.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>  
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.UserController.UpdateRole(CeciDapper.Domain.DTO.User.UserUpdateRoleDTO)">
+            <summary>
+            Updates the role of an existing user.
+            </summary>
+            <param name="model">The updated user role details.</param>
+            <returns>An action result indicating the success of the user role update.</returns>
+            <response code="200">Returns success when the user role is updated.</response>
+            <response code="400">Returns an error if the request fails.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>    
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.UserController.Delete(CeciDapper.Domain.DTO.User.UserDeleteDTO)">
+            <summary>
+            Deletes a user.
+            </summary>
+            <param name="model">The user identifier.</param>
+            <returns>An action result indicating the success of the user deletion.</returns>
+            <response code="200">Returns success when the user is deleted.</response>
+            <response code="400">Returns an error if the request fails.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>  
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.UserController.Get(CeciDapper.Domain.DTO.User.UserFilterDTO)">
+            <summary>
+            Retrieves all users.
+            </summary>
+            <returns>An action result containing the list of users.</returns>
+            <response code="200">Returns success with the list of users.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>   
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.UserController.GetById(CeciDapper.Domain.DTO.User.UserIdentifierDTO)">
+            <summary>
+            Retrieves a user by their identifier.
+            </summary>
+            <param name="model">The user identifier.</param>
+            <returns>An action result containing the user details.</returns>
+            <response code="200">Returns success with the user details.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>  
+        </member>
+        <member name="M:CeciDapper.WebApplication.Controllers.UserController.Import(CeciDapper.Domain.DTO.Import.FileUploadDTO)">
+            <summary>
+            Imports users.
+            </summary>
+            <param name="model">The file upload details.</param>
+            <returns>An action result indicating the success of the user import.</returns>
+            <response code="200">Returns success when the users are imported.</response>
+            <response code="400">Returns an error if the request fails.</response>
+            <response code="401">Unauthorized.</response>
+            <response code="403">Forbidden.</response>
+            <response code="500">Internal server error.</response>  
+        </member>
+        <member name="T:CeciDapper.WebApplication.Dependencys.DependencyInjection">
+            <summary>
+            Static class that contains extension methods for dependency injection configuration.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Dependencys.DependencyInjection.AddRepository(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Adds repositories as services to the dependency injection container.
+            </summary>
+            <param name="repositorys">The collection of repository services.</param>
+            <param name="configuration">The application configuration.</param>
+            <returns>The updated collection of repository services.</returns>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Dependencys.DependencyInjection.AddService(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Adds services as services to the dependency injection container.
+            </summary>
+            <param name="services">The collection of services.</param>
+            <param name="configuration">The application configuration.</param>
+            <returns>The updated collection of services.</returns>
+        </member>
+        <member name="T:CeciDapper.WebApplication.Extensions.SwaggerAuthorizeExtensions">
+            <summary>
+            Extension class that provides a method to add basic authorization to Swagger.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Extensions.SwaggerAuthorizeExtensions.UseSwaggerAuthorized(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adds the basic authorization middleware to Swagger in the ASP.NET Core pipeline.
+            </summary>
+            <param name="builder">The IApplicationBuilder object.</param>
+            <returns>The IApplicationBuilder object to allow chained calls.</returns>
+        </member>
+        <member name="T:CeciDapper.WebApplication.Filters.HangfireAuthorizationFilter">
+            <summary>
+            Filter class that provides basic authorization for Hangfire Dashboard.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Filters.HangfireAuthorizationFilter.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the HangfireAuthorizationFilter class with the specified user and password.
+            </summary>
+            <param name="user">The username for basic authentication.</param>
+            <param name="password">The password for basic authentication.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Filters.HangfireAuthorizationFilter.Authorize(Hangfire.Dashboard.DashboardContext)">
+            <summary>
+            Authorizes requests to the Hangfire Dashboard using basic authentication.
+            </summary>
+            <param name="context">The DashboardContext containing the current HttpContext.</param>
+            <returns>true if the user is authorized; otherwise, false.</returns>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Filters.HangfireAuthorizationFilter.IsAuthorized(System.String,System.String)">
+            <summary>
+            Checks if the provided username and password are authorized for accessing the Hangfire Dashboard.
+            </summary>
+            <param name="username">The username to check.</param>
+            <param name="password">The password to check.</param>
+            <returns>true if the username and password are authorized; otherwise, false.</returns>
+        </member>
+        <member name="T:CeciDapper.WebApplication.Middlewares.SwaggerBasicAuthMiddleware">
+            <summary>
+            Middleware class provides basic authentication for the Swagger documentation endpoint in the ASP.NET Core application.
+            </summary>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Middlewares.SwaggerBasicAuthMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{CeciDapper.Infra.CrossCutting.Settings.SwaggerSettings})">
+            <summary>
+            Initializes a new instance of the SwaggerBasicAuthMiddleware class with the specified dependencies.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="swaggerSettings">The Swagger settings provided through dependency injection.</param>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Middlewares.SwaggerBasicAuthMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the middleware to provide basic authentication for the Swagger documentation endpoint.
+            </summary>
+            <param name="context">The HttpContext representing the current HTTP request.</param>
+            <returns>A Task representing the asynchronous completion of the middleware operation.</returns>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Middlewares.SwaggerBasicAuthMiddleware.IsAuthorized(System.String,System.String)">
+            <summary>
+            Checks if the provided username and password are authorized for accessing the Hangfire Dashboard.
+            </summary>
+            <param name="username">The username to check.</param>
+            <param name="password">The password to check.</param>
+            <returns>true if the username and password are authorized; otherwise, false.</returns>
+        </member>
+        <member name="M:CeciDapper.WebApplication.Middlewares.SwaggerBasicAuthMiddleware.IsLocalRequest(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Checks if the current HTTP request is a local request.
+            </summary>
+            <param name="context">The HttpContext representing the current HTTP request.</param>
+            <returns>true if the request is local; otherwise, false.</returns>
+        </member>
+    </members>
+</doc>
